@@ -7,6 +7,9 @@ vim.lsp.enable({
 	"lua_ls"
 })
 
+vim.opt.number = true
+vim.opt.relativenumber = true
+
 vim.diagnostic.config({
 	virtual_text = true,
 	underline = true,
@@ -17,6 +20,12 @@ vim.diagnostic.config({
 		source = true,
 	},
 })
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'go', 'lua' },
+  callback = function() vim.treesitter.start() end,
+})
+
 vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(ev)
     vim.lsp.completion.enable(true, ev.data.client_id, ev.buf, {
