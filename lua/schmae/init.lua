@@ -4,7 +4,9 @@ print("my init")
 
 vim.lsp.enable({
 	"gopls",
-	"lua_ls"
+	"lua_ls",
+	"vim-language-server",
+	"yaml-language-server"
 })
 
 vim.api.nvim_create_autocmd('TextYankPost', {
@@ -26,10 +28,10 @@ vim.diagnostic.config({
 	},
 })
 
-vim.api.nvim_create_autocmd('FileType', {
-  pattern = { 'go', 'lua' },
-  callback = function() vim.treesitter.start() end,
-})
+-- vim.api.nvim_create_autocmd('FileType', {
+--   pattern = { 'go', 'lua' },
+--   callback = function() vim.treesitter.start() end,
+-- })
 
 vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(ev)

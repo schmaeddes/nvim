@@ -4,7 +4,13 @@ return {
 
 	version = '1.*',
 	opts = {
-		keymap = { preset = 'default' } ,
+		keymap = {
+			preset = 'default',
+
+			['<CR>'] = { 'select_and_accept', 'fallback'},
+			['<C-j>'] = { 'select_next', 'fallback'},
+			['<C-k>'] = { 'select_prev', 'fallback'},
+		} ,
 
 		apperance = {
 			nerd_font_variant = 'mono'
