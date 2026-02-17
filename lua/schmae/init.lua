@@ -13,6 +13,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 	callback = function() vim.hl.on_yank() end,
 })
 
+vim.lsp.enable({
+})
+
 
 vim.opt.number = true
 vim.opt.relativenumber = true
