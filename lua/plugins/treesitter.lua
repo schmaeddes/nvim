@@ -15,7 +15,8 @@ return {
 
 			require('nvim-treesitter').install {
 				'go',
-				'lua'
+				'lua',
+				'markdown'
 			}
 
 			vim.api.nvim_create_autocmd('FileType', {
