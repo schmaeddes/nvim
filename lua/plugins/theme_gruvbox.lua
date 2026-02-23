@@ -1,6 +1,6 @@
 return {
-	'ellisonleao/gruvbox.nvim',
-	config = function()
-		--vim.cmd.colorscheme('gruvbox')
-	end
+    "ellisonleao/gruvbox.nvim",
+    config = function()
+        --vim.cmd.colorscheme('gruvbox')
+    end,
 }

@@ -85,6 +85,18 @@ local function get_root_dir(fname)
   return vim.fs.root(fname, 'go.work') or vim.fs.root(fname, 'go.mod') or vim.fs.root(fname, '.git')
 end
 
+local function formatters()
+    local form = require("lvim.lsp.null-ls.formatters")
+
+    form.setup {
+        {
+            name = "golines",
+            args = { "--max-len", "80" },
+            filetypes = { "go" }
+        }
+    }
+end
+
 ---@type vim.lsp.Config
 return {
   cmd = { 'gopls' },
@@ -93,6 +105,7 @@ return {
     local fname = vim.api.nvim_buf_get_name(bufnr)
     get_mod_cache_dir()
     get_std_lib_dir()
+    formatters()
     -- see: https://github.com/neovim/nvim-lspconfig/issues/804
     on_dir(get_root_dir(fname))
   end,

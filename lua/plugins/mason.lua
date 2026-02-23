@@ -11,9 +11,10 @@ return {
             require("mason-lspconfig").setup({
                 ensure_installed = {
                     "gopls",
-                    "lua-language-server",
+                    "gomod",
+                    "lua_ls",
                     "marksman",
-                    "ltex-ls"
+                    "ltex"
                 }
             })
         end
