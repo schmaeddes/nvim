@@ -2,20 +2,22 @@ require("config.lazy")
 require("remap")
 print("my init")
 
+vim.cmd("set expandtab")
+vim.cmd("set tabstop=4")
+vim.cmd("set softtabstop=4")
+vim.cmd("set shiftwidth=4")
+vim.cmd("GitGutterEnable")
+
 vim.lsp.enable({
-	"gopls",
-	"lua_ls",
-	"vim-language-server",
-	"yaml-language-server"
+    "gopls",
+    "lua_ls",
+    "vim-language-server",
+    "yaml-language-server"
 })
 
 vim.api.nvim_create_autocmd('TextYankPost', {
 	callback = function() vim.hl.on_yank() end,
 })
-
-vim.lsp.enable({
-})
-
 
 vim.opt.number = true
 vim.opt.relativenumber = true
