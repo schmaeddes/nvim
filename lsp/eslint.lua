@@ -1,6 +1,6 @@
 return {
-    cmd = { "vscode-eslint-language-server", "--stdio" },
-    filetypes = { "tsx" },
+    cmd = { "typescript-language-server", "--stdio" },
+    filetypes = { "typescript" },
     root_markers = {
         ".git",
         "package.json",
