@@ -12,8 +12,6 @@ return {
                 ensure_installed = {
                     "gopls",
                     "lua_ls",
-                    "marksman",
-                    "ltex"
                 }
             })
         end

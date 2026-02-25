@@ -10,7 +10,5 @@ return {
                 null_ls.builtins.formatting.gofmt
 			},
 		})
-
-		vim.keymap.set("n", "<C-A-l>", vim.lsp.buf.format, {})
 	end,
 }
