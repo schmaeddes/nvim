@@ -18,6 +18,8 @@ return {
                 codeLens = { enable = true },
                 hint = { enable = true, semicolon = "Disable" },
             },
+            library = vim.api.nvim_get_runtime_file("", true), -- Neovim-Runtime einbinden
+            checkThirdParty = false,                  -- verhindert nervige Popups
         },
     },
     single_file_support = true,
