@@ -25,3 +25,6 @@ vim.keymap.set("n", "<leader>ff", telescopeBuiltin.find_files)
 vim.keymap.set("n", "<leader>fi", telescopeBuiltin.git_files)
 vim.keymap.set("n", "<leader>fr", telescopeBuiltin.lsp_references)
 vim.keymap.set("n", "<leader>d", telescopeBuiltin.diagnostics)
+
+-- local gitBlame = require("gitblame")
+vim.keymap.set("n", "<C-M-g>", ":GitBlameToggle<CR>")
