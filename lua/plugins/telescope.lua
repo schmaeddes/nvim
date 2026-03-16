@@ -18,6 +18,11 @@ return {
 						},
 					},
 				},
+                pickers = {
+                    find_files = {
+                        theme = "ivy"
+                    }
+                }
 			})
 		end,
 	},

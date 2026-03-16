@@ -17,7 +17,7 @@ vim.opt.relativenumber = true
 vim.lsp.enable({
 	"gopls",
 	"lua_ls",
-    "ts_ls"
+    "ts_ls",
 })
 
 vim.api.nvim_create_autocmd("TextYankPost", {
