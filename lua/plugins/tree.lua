@@ -1,15 +1,18 @@
 return {
-	"nvim-tree/nvim-tree.lua",
-	version = "*",
-	lazy = false,
-	dependencies = {
-		"nvim-tree/nvim-web-devicons",
-		config = function()
-			require("nvim-tree").setup({
+    "nvim-tree/nvim-tree.lua",
+    version = "*",
+    lazy = false,
+    dependencies = {
+        "nvim-tree/nvim-web-devicons",
+        config = function()
+            require("nvim-tree").setup({
                 view = {
-                    width = 40
-                }
+                    width = 40,
+                },
+                update_focused_file = {
+                    enable = true,
+                },
             })
-		end,
-	},
+        end,
+    },
 }

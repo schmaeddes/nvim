@@ -18,11 +18,18 @@ return {
 						},
 					},
 				},
-                pickers = {
-                    find_files = {
-                        theme = "ivy"
-                    }
-                }
+				pickers = {
+					find_files = {
+						theme = "ivy",
+						hidden = true,
+					},
+					live_grep = {
+						theme = "ivy",
+						additional_args = function(_)
+							return { "--hidden" }
+						end,
+					},
+				},
 			})
 		end,
 	},
